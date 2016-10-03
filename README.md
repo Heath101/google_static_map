@@ -35,6 +35,31 @@ signed_url = GoogleStaticMaps::SignedURL.new(url,'your_google_api_key')
 signed_url.to_s #=> "https://www.example.com?client=gme-yourcompany&signature=yXfNZ_fDBaOPoZ6wN4_bHNr8Hvc=\n"
 ```
 
+### Middleware
+
+Also included in this gem is a Rack middleware, which provides a convenient proxy to the Google Static Maps API.  This allows you to just make static map api calls to your own endpoint which will take care of adding the `client` parameter and signing the request before redirecting to the Google Static Maps API endpoint.
+
+By default the middleware will capture all calls made to `/google-static-map`, and relies on the presence of 2 environment variables:
+
+`GOOGLE_MAPS_API_KEY` your Premium Plan api key.
+
+`GOOGLE_MAPS_CLIENT` your Premium Plan client id.
+
+To use the middleware, add it to your `config.ru` file:
+
+```ruby
+# Sample config.ru file from a Rails App
+
+require ::File.expand_path('../config/environment',  __FILE__)
+require 'google_static_map/middleware'
+
+use GoogleStaticMap::Middleware
+run Rails.application
+
+```
+
+Then in your code you can just make calls to your endpoint with desired query parameters, and they will get redirected automatically.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
