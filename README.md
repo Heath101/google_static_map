@@ -1,9 +1,7 @@
 # GoogleStaticMap
 
-Google Static Map API Signature
-=====
 
-This gem is a quick implementation of the algorithm specified be google in order to authenticate API calls to Google's Static Maps API.
+This gem is a quick implementation of the algorithm specified by Google in order to authenticate API calls to Google's Static Maps API.
 
 In order to use Google Static Maps API with a Premium Plan, Google requires that you include a **client id** and **signature** for authentication.  This gem implements the digital signing algorithm specified by Google's documentation [Google Static Maps API Documentation](https://developers.google.com/maps/documentation/static-maps/get-api-key#client-id).
 
@@ -14,7 +12,7 @@ In order to use Google Static Maps API with a Premium Plan, Google requires that
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'google_static_map_signature'
+gem 'google_static_map'
 ```
 
 And then execute:
@@ -23,7 +21,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install google_static_map_signature
+    $ gem install google_static_map
 
 ## Usage
 
@@ -45,7 +43,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/google_static_map_signature. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/google_static_map. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
