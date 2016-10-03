@@ -1,4 +1,4 @@
-# GoogleStaticMapSignature
+# GoogleStaticMap
 
 Google Static Map API Signature
 =====

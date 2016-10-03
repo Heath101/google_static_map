@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'google_static_map_signature/version'
+require 'google_static_map/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "google_static_map_signature"
-  spec.version       = GoogleStaticMapSignature::VERSION
+  spec.name          = "google_static_map"
+  spec.version       = GoogleStaticMap::VERSION
   spec.authors       = ["Heath Attig"]
   spec.email         = ["heath.attig@gmail.com"]
 
   spec.summary       = %q{Google Static Map API digital signature algorithm}
   spec.description   = %q{When using Google Maps Premium Plan all calls to the static maps api require the inclusion of your client id and a digital signature.  This small gem implements Google's digital signing algorithm}
-  spec.homepage      =  "https://github.com/Heath101/google_static_map_signature"
+  spec.homepage      =  "https://github.com/Heath101/google_static_map"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

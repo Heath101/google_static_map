@@ -2,7 +2,7 @@ require 'base64'
 require 'uri'
 require 'openssl'
 
-module GoogleStaticMapSignature
+module GoogleStaticMap
   class SignedURL
     class MissingKey < StandardError; end;
     class InvalidKey < StandardError; end;

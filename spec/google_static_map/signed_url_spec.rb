@@ -1,6 +1,6 @@
-require_relative '../../lib/google_static_map_signature/signed_url'
+require_relative '../../lib/google_static_map/signed_url'
 
-module GoogleStaticMapSignature
+module GoogleStaticMap
   describe SignedURL do
     let(:base_url) { "http://www.example.com/foo" }
 
